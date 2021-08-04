@@ -1,0 +1,81 @@
+<div class="container-fluid p-3">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active">CabinetDoc</li>
+      <li class="breadcrumb-item color-primary">Rendez-vous</li>
+    </ol>
+  </nav>
+  <div class="row justify-content-end">
+    <div class="col-12 col-md-2 mb-3">
+      <div class="btn text-white btn-recherche rounded-1 w-100" id="btmodal" mdbBtn (click)="basicModal.show();"
+        mdbWavesEffect>
+        Ajouter RDV</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <p class="text-secondary ps-3 pt-2">Liste Rendez-vous</p>
+        <div class="m-3 mt-0 table-responsive">
+          <table class="table">
+            <thead>
+              <tr class="bg-table-color">
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">NB consultation</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Temp</th>
+              </tr>
+            </thead>
+            <tbody id="RDV-T">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+
+</div>
+
+
+<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+  aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h5 class="modal-title w-100" id="exampleModalLabel">Ajouter un rendez-vous</h5>
+      </div>
+      <div class="modal-body" id="content-add-RDV">
+        <div class="row justify-content-center mb-3">
+          <div class="col-11">
+            <div class="btn text-white btn-recherche rounded-1 w-100" (click)="have_account()">
+              Compte exist</div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11">
+            <div class="btn text-white btn-recherche rounded-1 w-100" (click)="dont_have_account()">Nouveau compte</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" id="content-add-RDV-footer">
+        <button type="button" class="btn btn-danger" mdbBtn aria-label="Close" (click)="basicModal.hide()"
+          mdbWavesEffect>Annuler</button>
+        <button type="button" mdbBtn color="primary" class="btn btn-primary" id="do_it" mdbWavesEffect
+          (click)="ajouter_rdv()">Ajouter RDV</button>
+          <button type="button" mdbBtn color="primary" class="btn btn-primary" id="do_it" mdbWavesEffect
+          (click)="ajouter_patient()">Ajouter patient</button>
+      </div>
+    </div>
+  </div>
+</div>

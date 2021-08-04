@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+<body>
+    <canvas id="stat"></canvas>
+</body>
+<script>
+    x ='{"cardstat":[{"nb":125,"porcentage":12.5,"condition":"+"},{"nb":21,"porcentage":12,"condition":"-"},{"nb":11,"porcentage":4,"condition":"+"}],"label" : ["10January", "11January", "12January", "13January", "14January", "15January"] , "line1" : [0, 52, 5, 2, 40, 30, 45],"line2" : [60, 18, 37,52, 10, 60, 12] }';
+    var b = JSON.parse(x);
+
+// chart config
+var ctx2 = document.getElementById('stat').getContext('2d');
+var chart2 = new Chart(ctx2, {
+    type: 'line',
+    data: {
+        labels: b.label,
+        datasets: [{
+            backgroundColor: '#54D8FF20',
+            borderColor: '#54D8FF',
+            borderWidth: 1 ,
+            data: b.line1,
+            pointBackgroundColor: '#ffffff',
+            pointBorderColor : '#54D8FF'
+        },
+        {
+            backgroundColor: '#A7A7FF20',
+            borderColor: '#A3A0FB',
+            borderWidth: 1 ,
+            data: b.line2,
+            pointBackgroundColor: '#ffffff',
+            pointBorderColor : '#A3A0FB'
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+                display: false
+                },
+                tooltips: {
+                        callbacks: {
+                                label: function(tooltipItem) {
+                                        return tooltipItem.yLabel;
+                                }
+                        }
+                }
+        },
+        elements: {
+                line: {
+                        borderWidth: 1
+        }
+    }
+});
+
+
+
+</script>
+</html>
+

@@ -1,0 +1,23 @@
+
+
+.stat-icon svg {
+    max-width: 300px;
+    min-width: 80px;
+
+}
+.stat1{
+    fill: url(#MyGradient1);
+}
+.stat2{
+    fill: url(#MyGradient2);
+}
+.stat3{
+    fill: url(#MyGradient3);
+}
+.bg-table-color{
+    background: rgb(240, 240, 240);
+}
+.bg-table-color th{
+    color: #999ca7;
+    font-weight: bold;
+}

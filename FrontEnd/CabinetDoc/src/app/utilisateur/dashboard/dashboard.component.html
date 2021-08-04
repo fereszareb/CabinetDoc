@@ -1,0 +1,166 @@
+<div class="container-fluid p-3">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                        <li class="breadcrumb-item active">CabinetDoc</li>
+                        <li class="breadcrumb-item color-primary">Tableau de bord</li>
+                </ol>
+        </nav>
+        <div class="ps-3 pe-3">
+                <div class="row">
+                        <div class="col-12 col-md-4 pb-2">
+                                <div class="card">
+                                        <div class="card-body p-3">
+                                                <p class="mb-4 text-secondary">Nombre total des patients</p>
+                                                <div class="row">
+                                                        <div class="col-7" id="NTP"></div>
+                                                        <div class="col-5 stat-icon stat1">
+                                                                <svg class="stat" xmlns="http://www.w3.org/2000/svg"
+                                                                        version="1.1" width="100%" viewBox="0 0 120 50"
+                                                                        preserveAspectRatio="none">
+                                                                        <defs>
+                                                                                <linearGradient id="MyGradient1"
+                                                                                        gradientTransform="rotate(90)">
+                                                                                        <stop offset="5%"
+                                                                                                stop-color="#55D8FE"
+                                                                                                stop-opacity="1" />
+                                                                                        <stop offset="95%"
+                                                                                                stop-color="#55D8FE"
+                                                                                                stop-opacity="0.5" />
+                                                                                </linearGradient>
+                                                                        </defs>
+                                                                        <path class="a"
+                                                                                d="M106,40V22h6V40Zm-9,0V10h8V40Zm-9,0V20h8V40Zm-9,0V27h8V40Zm-9,0V15h8V40Zm-9,0V5h8V40Zm-9,0V15h8V40Zm-9,0V20h8V40Zm-9,0V0h8V40Zm-9,0V10h8V40Zm-7,0V22h6V40ZM9,40V10h8V40ZM0,40V20H8V40Z" />
+                                                                </svg>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col-12 col-md-4 pb-2">
+                                <div class="card">
+                                        <div class="card-body p-3">
+                                                <p class="mb-4">Rendez-vous Aujourd'hui</p>
+                                                <div class="row">
+                                                        <div class="col-7" id="RDV-TDY"></div>
+                                                        <div class="col-5 stat-icon stat2">
+                                                                <svg class="stat" xmlns="http://www.w3.org/2000/svg"
+                                                                        version="1.1" width="100%" viewBox="0 0 120 50"
+                                                                        preserveAspectRatio="none">
+                                                                        <defs>
+                                                                                <linearGradient id="MyGradient2"
+                                                                                        gradientTransform="rotate(90)">
+                                                                                        <stop offset="5%"
+                                                                                                stop-color="#A3A0FB"
+                                                                                                stop-opacity="1" />
+                                                                                        <stop offset="95%"
+                                                                                                stop-color="#A3A0FB"
+                                                                                                stop-opacity="0.5" />
+                                                                                </linearGradient>
+                                                                        </defs>
+                                                                        <path class="a"
+                                                                                d="M106,40V22h6V40Zm-9,0V10h8V40Zm-9,0V20h8V40Zm-9,0V27h8V40Zm-9,0V15h8V40Zm-9,0V5h8V40Zm-9,0V15h8V40Zm-9,0V20h8V40Zm-9,0V0h8V40Zm-9,0V10h8V40Zm-7,0V22h6V40ZM9,40V10h8V40ZM0,40V20H8V40Z" />
+                                                                </svg>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col-12 col-md-4 pb-3">
+                                <div class="card">
+                                        <div class="card-body p-3 stat3">
+                                                <p class="mb-4">Nouveaux patients</p>
+                                                <div class="row">
+                                                        <div class="col-7" id="NP"></div>
+                                                        <div class="col-5 stat-icon">
+                                                                <svg class="stat" xmlns="http://www.w3.org/2000/svg"
+                                                                        version="1.1" width="100%" viewBox="0 0 120 50"
+                                                                        preserveAspectRatio="none">
+                                                                        <defs>
+                                                                                <linearGradient id="MyGradient3"
+                                                                                        gradientTransform="rotate(90)">
+                                                                                        <stop offset="5%"
+                                                                                                stop-color="#5EE2A0"
+                                                                                                stop-opacity="1" />
+                                                                                        <stop offset="95%"
+                                                                                                stop-color="#5EE2A0"
+                                                                                                stop-opacity="0.5" />
+                                                                                </linearGradient>
+                                                                        </defs>
+                                                                        <path class="a"
+                                                                                d="M106,40V22h6V40Zm-9,0V10h8V40Zm-9,0V20h8V40Zm-9,0V27h8V40Zm-9,0V15h8V40Zm-9,0V5h8V40Zm-9,0V15h8V40Zm-9,0V20h8V40Zm-9,0V0h8V40Zm-9,0V10h8V40Zm-7,0V22h6V40ZM9,40V10h8V40ZM0,40V20H8V40Z" />
+                                                                </svg>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-12 mb-3">
+                                <div class="card">
+                                        <p class="card-body text-secondary">Nombre des patients par jour</p>
+                                        <div class="card-body" style="height:300px;display: block;">
+                                                <canvas mdbChart [chartType]="chartType" [datasets]="chartDatasets"
+                                                        [labels]="chartLabels" [colors]="chartColors"
+                                                        [options]="chartOptions" [legend]="true"
+                                                        (chartHover)="chartHovered($event)"
+                                                        (chartClick)="chartClicked($event)">
+                                                </canvas>
+
+
+
+
+
+
+
+
+
+
+
+                                        </div>
+                                </div>
+
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-12 col-md-7">
+                                <div class="card">
+                                        <p class="text-secondary ps-3 pt-2">Rendez-vous d'aujourd'hui</p>
+                                        <div class="m-3 mt-0 table-responsive">
+                                                <table class="table">
+                                                        <thead>
+                                                                <tr class="bg-table-color">
+                                                                        <th scope="col">Nom</th>
+                                                                        <th scope="col">Prénom</th>
+                                                                        <th scope="col">NB consultation</th>
+                                                                        <th scope="col">Gendre</th>
+                                                                        <th scope="col">temp</th>
+                                                                </tr>
+                                                        </thead>
+                                                        <tbody id="RDV-TDY-T">
+                                                        </tbody>
+                                                </table>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col-12 col-md-5">
+                                <div class="card">
+                                        <p class="text-secondary ps-3 pt-2">Rendez-vous par mois</p>
+                                        <div class="m-3 mt-0 table-responsive">
+                                                <table class="table">
+                                                        <thead>
+                                                                <tr class="bg-table-color">
+                                                                        <th scope="col">Mois</th>
+                                                                        <th scope="col">NB Patients</th>
+                                                                        <th scope="col">NB consultation</th>
+                                                                </tr>
+                                                        </thead>
+                                                        <tbody id="RDVM">
+                                                        </tbody>
+                                                </table>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>

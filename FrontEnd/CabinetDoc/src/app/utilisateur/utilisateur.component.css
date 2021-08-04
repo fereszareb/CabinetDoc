@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .sidebar{
+      position: fixed;
+      width: 250px;
+      height: 100%;
+      left: 0;
+      background: #2699FB;
+      transition: 0.4s;
+      overflow: hidden;
+      box-shadow: 0.5px 0 2px #00000024;
+  }
+  nav ul{
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    padding-left: 0;
+
+  }
+  nav ul li{
+      line-height: 50px;
+  }
+  nav ul li a{
+      position: relative;
+      color: #ffffff;
+      text-decoration: none !important;
+      font-size: 16px;
+      padding-left: 20px;
+      font-weight: 500;
+      display: -webkit-inline-box;
+      width: 100%;
+      cursor: pointer;
+  }
+  nav ul li a:hover , .dm-btn:hover{
+    background: #1385e9;
+    color: #ffffff;
+  }
+  nav ul li a p {
+          margin: 0px;
+          margin-left : 10px;
+  }
+  nav ul li a .fas {
+    display: none;
+    margin: auto;
+    float: right;
+    margin-right: 10%;
+  }
+  nav ul li.active a .fas {
+    display: block;
+  }
+  nav ul li.active a{
+      background: #81C2F9;
+  }
+
+  nav ul li a span{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: transform 0.4s;
+  }
+  nav ul li:last-child{
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .logo-cabinetdoc {
+          text-align : center ;
+          margin: 5px ;
+          margin-top: 30px;
+          margin-bottom: 15px;
+  }
+  .logo-cabinetdoc img{
+          width: 70%;
+          margin : auto ;
+          transition : 0.5s ;
+  }
+  .btn_slidebar{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: left 0.4s ease;
+    padding-top: 2px;
+  }
+  .btn_slidebar:hover{
+          background-color : #1385e9 ;
+  }
+  .btn_slidebar span{
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+  }
+  .hidden-slidebar{
+          width : 0px;
+  }
+  .menu {
+          width: 250px;
+          height: calc(100% - 140px);
+  }
+  ::-webkit-scrollbar {
+      width: 10px;
+  }
+    ::-webkit-scrollbar-track {
+      background-color:  rgb(243, 243, 243); 
+   
+  }
+    ::-webkit-scrollbar-thumb {
+      background: black; 
+  
+  }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #1b1b1b; 
+  }
+  .navbar-content{
+          height : 50px ;
+          width : 100% ;
+          padding: 0px !important;
+          background : #2699FB;
+  }
+  .content{
+          width : 100% ;
+          padding-left: 250px;
+          transition: 0.4s;
+  }
+  .content.click{
+    padding-left: 0px;
+  }
+  
+input , select , textarea{
+  outline: none;
+}
+.navbar_profile_box{
+  width: 200px;
+  display: flex;
+  position: absolute;
+  left: calc( 90% - 200px );
+}
+.navbar_profile_box .box_profile{
+  display: flex;
+  height: 50px;
+  padding: 5px;
+  cursor: pointer;
+}
+.navbar_profile_box .box_profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1.5px solid #fff;
+}
+.navbar_profile_box .box_profile p{
+  margin: 9px 10px 0 3px;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+}
+.navbar_profile_box .box_profile:hover{
+  background: #378ffb;
+}
+.navbar_profile_box i{
+    font-size: 21px;
+    color: #fff;
+    margin: 14px 20px 0 0;
+    cursor: pointer;
+}
+.navbar_profile_box span{
+  background: rgb(0, 0, 0);
+  padding: 2px;
+  position: absolute;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 50px;
+  color: #fff;
+  left: 9px;
+  top: 2px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+.notification {
+  position: absolute;
+  background: rgb(255, 255, 255);
+  top: 55px;
+  left: -60px;
+  display: none;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.125);
+  border-radius: 5px;
+  outline: none;
+  z-index: 2000;
+  width: 260px;
+}
+.notif_66554 i {
+  font-size: 20px;
+  text-align: center;
+  padding: 3px;
+  margin: 7px;
+  width: 32px;
+}
+.notif_66554 {
+  width: 100%;
+  display: flex;
+  text-align: left;
+  border-bottom: 0.2px solid #0000000f;
+  padding: 3px;
+  color: #313131;
+}
+.notif_66554:hover{
+  background: rgba(231, 231, 231, 0.279);
+  color :#313131;
+}
+.notif_66554 p {
+  margin: 0;
+  font-size: 13px;
+}
+.notif_66554 small{
+  font-size: 11px;
+  color: #c5c5e6;
+}
+.navbar_profile_box .active {
+display: block;
+}
+.drop_profile {
+  position: absolute;
+  background: rgb(255, 255, 255);
+  top: 55px;
+  left: 36px;
+  display: none; 
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.125);
+  border-radius: 5px;
+  outline: none;
+  width: 150px;
+  z-index: 2000;
+}
+
+
+
+
+
+/*************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+

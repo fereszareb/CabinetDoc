@@ -1,0 +1,59 @@
+<div class="container-fluid p-3">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">CabinetDoc</li>
+            <li class="breadcrumb-item color-primary">Patients</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-12 col-md-10">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="form__div">
+                        <input type="text" class="form__input rounded-1 border-2" id="nom" placeholder="">
+                        <label class="form__label">Entrer Nom</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="form__div">
+                        <input type="text" class="form__input rounded-1 border-2" id="prenom" placeholder="">
+                        <label class="form__label">Entrer Prénom</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="form__div">
+                        <input type="text" class="form__input rounded-1 border-2" id="cin" pattern="[0-9]"
+                            placeholder="">
+                        <label class="form__label">Entrer CIN</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-2">
+            <div class="btn text-white btn-recherche rounded-1 w-100" (click)="chercher_patient()">Recherche</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <p class="text-secondary ps-3 pt-2">Liste Patients</p>
+                <div class="m-3 mt-0 table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr class="bg-table-color">
+                                <th scope="col">Nom</th>
+                                <th scope="col">Prénom</th>
+                                <th scope="col">NB consultation</th>
+                                <th scope="col">Genre</th>
+                                <th scope="col">inscription</th>
+                            </tr>
+                        </thead>
+                        <tbody id="P">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

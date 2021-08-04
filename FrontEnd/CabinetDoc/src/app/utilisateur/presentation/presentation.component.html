@@ -1,0 +1,14 @@
+<div class="container-fluid p-3">
+  <ng-container *ngIf="!showTemplateForm">
+
+    <div [formGroup]="form" id="content-file">
+      <div formControlName="html" [ngxSummernote]="config" [ngxSummernoteDisabled]="editorDisabled" (blur)="onBlur()"
+        (mediaDelete)="onDelete($event)" (summernoteInit)="summernoteInit($event)">
+      </div>
+    </div>
+
+  </ng-container>
+  <button type="button" mdbBtn color="primary" class="btn btn-primary" mdbWavesEffect
+    (click)="save_txt()">Sauvegarder</button>
+
+</div>
